@@ -1,183 +1,210 @@
-body{
-    min-height: 1200px;
-    width: 100%;
-    overflow: hidden;
-    background-image: url(https://i.ytimg.com/vi/cr3Bf53Lseo/maxresdefault.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600;1,700;1,800;1,900&display=swap");
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
-.video {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    /* overflow: hidden; */
-    position: relative;
-    text-align: center;
+html {
+  font-size: 62.5%;
+  --darkBlue: rgb(15, 11, 66);
+  --blue: rgb(40, 26, 228);
+}
 
+body {
+  font-family: "Poppins", sans-serif;
+  line-height: 1.7;
+  color: #777;
+  font-weight: 400;
+  padding: 3rem;
+  background: linear-gradient(135deg, #fff 40%, var(--blue) 45%, #fff 45%);
+
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-/* .video img {
-    position: absolute;
-    min-height: 100%;
-    width: 100%;
-} */
-.video .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    color: #fff;
+.boxs {
+  max-width: 40rem;
+  width: 100%;
+  position: relative;
+  background-color: transparent;
+  height: 60rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s;
 }
-.video .overlay h2 {
-  text-transform: uppercase;
-  font-size: 35px
+
+.forms {
+  padding: 2.4rem;
+  background-color: #fff;
+  border-radius: 15px;
+  width: 80%;
+  perspective: 200rem;
+  height: fit-content;
+  max-height: 535px;
+  height: 100%;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+  position: absolute;
+  backface-visibility: hidden;
+  transition: all 4s;
 }
-.video .overlay p {
-    
-    color: #cccccc !important;
+.forms h2 {
+  margin-bottom: 1.4rem;
+  font-weight: 700;
+  font-size: 2.6rem;
+  letter-spacing: 1.5px;
+  color: #333;
+  position: relative;
 }
-.video .overlay .social {
-    margin-top: 40px;
-    
+.forms h2::before {
+  content: "";
+  position: absolute;
+  bottom: -0.5rem;
+  left: 2%;
+  width: calc(10%);
+  height: 5px;
+  /* width: 100%; */
+  /* transform: translateX(-50%); */
+  background-color: var(--blue);
+  transition: all 0.5s;
 }
-.video .overlay .social i {
-    width: 55px;
-    height: 55px;
-    border-radius: 50%;
-    border: 1px solid #cccccc;
-    line-height: 55px;
-    font-size: 25px;
-    transition: .5s ease;
-    margin-right: 5px;
+.forms:hover h2::before {
+  background-color: var(--blue);
+  width: 45%;
 }
-.video .overlay .social i:last-child {
-    margin-right: 0;
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+  font-size: 2.2rem;
 }
-.video .overlay .social i:hover {
-    border-color: #0b8ffe;
-    cursor: pointer;
-    box-shadow: 0 0 20px #0b8ffe;
-    transform: scale(1.2)
+
+.log__box {
+  position: relative;
+  height: 5rem;
+  width: 100%;
 }
-.video .overlay form {
-    width: 80%;
-    margin: 60px auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    
+.input-style {
+  width: 100%;
+  border: none;
+  outline: none;
+  height: 100%;
+  padding: 0 3rem;
+  font-size: 1.2rem;
+  color: #ccc;
+  border-bottom: 2px solid #ccc;
+  /* position: absolute; */
+  transition: all 0.3s;
 }
-.video .overlay form input {
-    height: 40px;
-    background-color: transparent;
-    padding: 5px;
-    border: 0;
-    border-bottom: 1px solid #ccc;
-    margin-bottom: 30px;
+form .i {
+  font-size: 2.2rem;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  color: #ccc;
+}
+form .eye {
+  font-size: 2.2rem;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  color: #ccc;
+  padding: 1rem;
+  cursor: pointer;
+}
+.log__box input:is(:focus, :valid) {
+  border-bottom-color: var(--blue);
+  font-size: 1.6rem;
+  color: #777;
+}
+
+.log__box input:is(:focus, :valid) ~ .i {
+  color: var(--blue);
+}
+.log__remember label {
+  font-size: 1.2rem;
+}
+.log__remember {
+  margin-top: -1rem;
+  height: fit-content;
+}
+form button {
+  width: 100%;
+  height: 5rem;
+  border-radius: 10px;
+  background-color: var(--blue);
   color: #fff;
+  border: none;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  transform: translateY(-0.5rem);
+  transition: all 0.3s;
 }
-.video .overlay form textarea {
-    background-color: transparent;
-    padding: 5px 0px;
-    border: 0;
-    border-bottom: 1px solid #ccc;
-    margin-bottom: 30px;
-    height: 40px;
-    width: 100%;
-  color: #fff;
+.form__text {
+  font-size: 1.4rem;
+  display: flex;
+  gap: 0.5rem;
 }
-.video .overlay form input:focus,.video .overlay form textarea:focus {
-    border-bottom-color: #0b8ffe;
-    box-shadow: 0px 0px 20px rgba(11, 143, 254, 0.42);
-    background-color: transparent;
+.form__text a {
+  text-decoration: none;
+  color: var(--blue);
 }
-.video .overlay form input::-webkit-input-placeholder,
-.video .overlay form textarea::-webkit-input-placeholder {
-    color: #e8e8e8;
-    text-transform: capitalize;
+input {
+  border: none;
+  outline: none;
 }
-.video .overlay form [name="name"],
-.video .overlay form [name="email"],
-.video .overlay form [name="phone"] {
-    width: 31%;
+
+.form__signUp {
+  transform: rotateY(-180deg);
 }
-.video .overlay form [name="website"],
-.video .overlay form [name="subject"] {
-    width: 48%;
-    margin-bottom: 80px;
+
+.form__login form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 5rem;
 }
-.video .overlay form button {
-    background-color: transparent;
-    padding: 10px 0;
-    width: 100%;
-    border: 1px solid #ccc;
-    color: #fff;
-    text-transform: uppercase;
-    transition: 1s ease;
-    overflow: hidden;
+
+input:invalid {
+  color: red;
 }
-.video .overlay form button:hover {
-    color: #0b8ffe;
-    border-color: #0b8ffe;
-    box-shadow: 0 0 20px #0b8ffe;
-  cursor: pointer
+input:invalid:focus {
+  border-bottom: 2px solid red;
 }
-.video .overlay form button:hover div {
-   /* transform: rotate(-422deg) scale(1.5, 1.5) translate(50%, 50px);*/
-    transform: scale(2) translateX(200px);
-    transition: 1s ease-in-out;
-    color: transparent;
+small {
+  font-size: 1rem !important;
+  position: absolute;
+  bottom: -40%;
+  width: 100%;
+  left: 0;
+  opacity: 0;
 }
-/* ----------- start media query for video & contact ----*/
-@media only screen and (max-width: 575px) {
-    .video .overlay {
-        padding-top: 40px;
-    }
-    .video .overlay .social {
-        margin-top: 30px;        
-        
-    }
-    .video .overlay .social i {
-        width: 40px;
-        height: 40px;
-        font-size: 20px;
-        line-height: 40px;
-    }
-    .video .overlay form {
-        width: 90%;
-        margin: 40px auto 0;
-        flex-direction: column;
-        align-items: center;
-    }
-    .video .overlay form input {
-        width: 95% !important;
-        margin-bottom: 15px !important;
-    }
-    .video .overlay form textarea {
-        width: 95%;
-        margin-top: 15px;
-    }
-    .video .overlay form button {
-        width: 95%;
-    }
+.error {
+  opacity: 1 !important;
+  color: red;
 }
-@media (min-width: 576px) and (max-width: 991px) {
-    
-    .video .overlay form {
-        width: 90%;
-        margin: 60px auto 0;
-    }
-    .video .overlay form [name="name"],
-    .video .overlay form [name="email"] {
-        width: 48%;
-    }
-    .video .overlay form [name="phone"],
-    .video .overlay form [name="website"] {
-        width: 48%;
-        margin-bottom: 30px;
-    }
-    .video .overlay form [name="subject"] {
-        width: 100%;
-    }
-    
+button:active {
+  background-color: var(--darkBlue);
+  transform: translateY(-0.2rem);
+  box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.2);
+}
+input {
+  font-family: "Poppins", sans-serif;
+}
+input[type="checkbox"] {
+  accent-color: var(--blue);
+}
+input[type="checkbox"]:checked {
+  outline: 3px solid var(--blue);
+  outline-offset: 1px;
 }
