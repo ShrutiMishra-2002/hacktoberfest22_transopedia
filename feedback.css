@@ -56,7 +56,8 @@ body{
 .video .overlay .social i:hover {
     border-color: #0b8ffe;
     cursor: pointer;
-    box-shadow: 0 0 20px #0b8ffe;
+    box-shadow: 0 0 20px #7FFF00;
+    background-color: black;
     transform: scale(1.2)
 }
 .video .overlay form {
@@ -118,15 +119,16 @@ body{
 }
 .video .overlay form button:hover {
     color: #0b8ffe;
-    border-color: #0b8ffe;
-    box-shadow: 0 0 20px #0b8ffe;
+    border-color: #000000;
+    box-shadow: 0 0 20px #23ff01;
   cursor: pointer
 }
 .video .overlay form button:hover div {
    /* transform: rotate(-422deg) scale(1.5, 1.5) translate(50%, 50px);*/
     transform: scale(2) translateX(200px);
-    transition: 1s ease-in-out;
-    color: transparent;
+    transition: 1s ease-in;
+    color: rgb(0, 16, 16);
+    background-color: rgb(0, 191, 255);
 }
 /* ----------- start media query for video & contact ----*/
 @media only screen and (max-width: 575px) {
