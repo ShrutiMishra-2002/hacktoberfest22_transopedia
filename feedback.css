@@ -1,210 +1,232 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600;1,700;1,800;1,900&display=swap");
-*,
-*::after,
-*::before {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-html {
-  font-size: 62.5%;
-  --darkBlue: rgb(15, 11, 66);
-  --blue: rgb(40, 26, 228);
-}
-
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro);
 body {
-  font-family: "Poppins", sans-serif;
-  line-height: 1.7;
-  color: #777;
-  font-weight: 400;
-  padding: 3rem;
-  background: linear-gradient(135deg, #fff 40%, var(--blue) 45%, #fff 45%);
-
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.boxs {
-  max-width: 40rem;
-  width: 100%;
-  position: relative;
-  background-color: transparent;
-  height: 60rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.4s;
+	  background: url('./assets/img/feedback.jpg')no-repeat center center fixed;
+  	-webkit-background-size: cover;
+	  -moz-background-size: cover;
+	  -o-background-size: cover;
+	  background-size: cover;
+    padding-top: 0px;
 }
 
-.forms {
-  padding: 2.4rem;
-  background-color: #fff;
-  border-radius: 15px;
-  width: 80%;
-  perspective: 200rem;
-  height: fit-content;
-  max-height: 535px;
-  height: 100%;
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
-  position: absolute;
-  backface-visibility: hidden;
-  transition: all 4s;
+h1 {
+   color: #fff; 
+   text-shadow: 1px 1px 0 rgba(0,0,0,0.4);
+   padding-top: 30px;
+   font-size: 100px; 
+   font-weight: 700;
+   text-align: center;
+   font-family: 'Source Sans Pro', sans-serif;
+   margin: 0px;
 }
-.forms h2 {
-  margin-bottom: 1.4rem;
-  font-weight: 700;
-  font-size: 2.6rem;
-  letter-spacing: 1.5px;
-  color: #333;
-  position: relative;
-}
-.forms h2::before {
-  content: "";
-  position: absolute;
-  bottom: -0.5rem;
-  left: 2%;
-  width: calc(10%);
-  height: 5px;
-  /* width: 100%; */
-  /* transform: translateX(-50%); */
-  background-color: var(--blue);
-  transition: all 0.5s;
-}
-.forms:hover h2::before {
-  background-color: var(--blue);
-  width: 45%;
-}
+
 form {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  gap: 2rem;
-  font-size: 2.2rem;
+    margin-left:auto;
+    margin-right:auto;
+    width: 965px;
+    height: 450px;
+    padding:30px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box; 
+    overflow: hidden; 
 }
 
-.log__box {
+textarea{
+	  background: rgba(0, 0, 0, 0.4); 
+    width: 894px;
+    height: 110px;
+    border: none;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box; 
+    display: block;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 18px;
+    color: #fff;
+    padding-left: 45px;
+    padding-right: 20px;
+    padding-top: 12px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+select {
+    width: 960px;
+    height: 48px;
+    line-height: 1.5;
+    font-size: 1.4em;
+    border: none;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -mox-border-radius: 10px;
+    color: #fff;
+    display: block;
+    background: transparent;
+    background-color: rgba(0,0,0,.4);
+    margin-bottom: 20px;
+    display: block;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 18px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.nameinput, .emailinput {
+    width: 894px;
+    height: 48px;
+    border: none;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box; 
+    display: block;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 18px;
+    color: #fff;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 20px;
+}
+
+input[type=submit] {
+    cursor: pointer;
+}
+
+input.nameinput {
+	  background: rgba(0, 0, 0, 0.4); 
+	  padding-left: 45px;
+}
+
+input.emailinput {
+	  background: rgba(0, 0, 0, 0.4);
+	  padding-left: 45px;
+}
+
+input.message {
+	  background: rgba(0, 0, 0, 0.4);
+	  padding-left: 45px;
+}
+
+select.indent {
+	  padding-left: 45px;
+    cursor: pointer;
+}
+
+::-webkit-input-placeholder {
+	  color: #fff;
+}
+
+:-moz-placeholder{ 
+    color: #fff; 
+}
+
+::-moz-placeholder {
+    color: #fff;
+}
+
+:-ms-input-placeholder {  
+	  color: #fff; 
+}
+
+input:focus, textarea:focus { 
+	  background-color: rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 0 5px 1px rgba(255,255,255,.5);
+    -webkit-box-shadow: 0 0 5px 1px rgba(255,255,255,.5);
+    box-shadow: 0 0 5px 1px rgba(255,255,255,.5);
+	  overflow: hidden; 
+}
+
+.btn {
+	border: none;
+	font-family: 'Source Sans Pro', sans-serif;
+  font-size: 18px;
+  width: 200px;
+  height: 48px;
+	color: #000;
+	background: #fff;
+	cursor: pointer;
+	display: inline-block;
+	font-weight: 700;
+	position: relative;
+  outline: none;
+  box-shadow: 0 6px #cecece;
+  border-radius: 5px;
+  float: right;
+  margin-right: 6px;
+}
+
+.btn:hover {
+	background: #fff;
+  outline: none;
+  box-shadow: 0 4px #cecece;
+	top: 2px;
+}
+
+.btn:active {
+	background: #fff;
+  outline: none;
+  box-shadow: 0 0 #cecece;
+	top: 6px;
+}
+
+.flat {
+	border: none;
+	cursor: pointer;
+	display: inline-block;
+	outline: none;
   position: relative;
-  height: 5rem;
-  width: 100%;
-}
-.input-style {
-  width: 100%;
-  border: none;
-  outline: none;
-  height: 100%;
-  padding: 0 3rem;
-  font-size: 1.2rem;
-  color: #ccc;
-  border-bottom: 2px solid #ccc;
-  /* position: absolute; */
-  transition: all 0.3s;
-}
-form .i {
-  font-size: 2.2rem;
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
-  color: #ccc;
-}
-form .eye {
-  font-size: 2.2rem;
-  position: absolute;
-  top: 50%;
-  right: 0;
-  transform: translateY(-50%);
-  color: #ccc;
-  padding: 1rem;
-  cursor: pointer;
-}
-.log__box input:is(:focus, :valid) {
-  border-bottom-color: var(--blue);
-  font-size: 1.6rem;
-  color: #777;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
 }
 
-.log__box input:is(:focus, :valid) ~ .i {
-  color: var(--blue);
-}
-.log__remember label {
-  font-size: 1.2rem;
-}
-.log__remember {
-  margin-top: -1rem;
-  height: fit-content;
-}
-form button {
-  width: 100%;
-  height: 5rem;
-  border-radius: 10px;
-  background-color: var(--blue);
-  color: #fff;
-  border: none;
-  font-weight: 700;
-  letter-spacing: 1.5px;
-  cursor: pointer;
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
-  transform: translateY(-0.5rem);
-  transition: all 0.3s;
-}
-.form__text {
-  font-size: 1.4rem;
-  display: flex;
-  gap: 0.5rem;
-}
-.form__text a {
-  text-decoration: none;
-  color: var(--blue);
-}
-input {
-  border: none;
-  outline: none;
+
+.flat:before {
+	position: absolute;
+	height: 100%;
+	left: 0;
+	top: 0;
+	line-height: 3;
+	font-size: 140%;
+	width: 60px;
 }
 
-.form__signUp {
-  transform: rotateY(-180deg);
+
+.flat {
+   width: 960px !important;
+   height: 48px;
+   overflow: hidden;
+   margin-bottom: 20px;
+   background: url(http://www.jordancundiff.com/wp-content/uploads/2014/03/icon-dropdown.png) no-repeat right;
+   }
+
+@media only screen and ( min-width: 768px ) and ( max-width: 1035px ) {
+  h1 { font-size: 80px; }
+  form { width: 736px !important; }
+    #wpcf7-f156-p143-o1\20 formwrap > form > p > span.wpcf7-form-control-wrap.Subject.flat > select, #wpcf7-f156-p143-o1\20 formwrap > form > p > span.wpcf7-form-control-wrap.Subject.flat { width: 731px !important; }
+    .nameinput, .emailinput, #wpcf7-f156-p143-o1\20 formwrap > form > p > span.wpcf7-form-control-wrap.Message > textarea { width: 666px !important; }
 }
 
-.form__login form {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  margin-top: 5rem;
+@media only screen and ( max-width: 804px ) {
+    h1 { font-size: 50px; }
+  form { width: 450px !important; }
+   #wpcf7-f156-p143-o1\20 formwrap > form > p > span.wpcf7-form-control-wrap.Subject.flat > select, #wpcf7-f156-p143-o1\20 formwrap > form > p > span.wpcf7-form-control-wrap.Subject.flat { width: 445px !important; }
+    .nameinput, .emailinput, #wpcf7-f156-p143-o1\20 formwrap > form > p > span.wpcf7-form-control-wrap.Message > textarea { width: 380px !important; }
 }
 
-input:invalid {
-  color: red;
-}
-input:invalid:focus {
-  border-bottom: 2px solid red;
-}
-small {
-  font-size: 1rem !important;
-  position: absolute;
-  bottom: -40%;
-  width: 100%;
-  left: 0;
-  opacity: 0;
-}
-.error {
-  opacity: 1 !important;
-  color: red;
-}
-button:active {
-  background-color: var(--darkBlue);
-  transform: translateY(-0.2rem);
-  box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.2);
-}
-input {
-  font-family: "Poppins", sans-serif;
-}
-input[type="checkbox"] {
-  accent-color: var(--blue);
-}
-input[type="checkbox"]:checked {
-  outline: 3px solid var(--blue);
-  outline-offset: 1px;
+@media only screen and ( max-width: 517px ) {
+     h1 { font-size: 30px; }
+  form { width: 295px !important; }
+  #wpcf7-f156-p143-o1\20 formwrap > form > p > span.wpcf7-form-control-wrap.Subject.flat > select, #wpcf7-f156-p143-o1\20 formwrap > form > p > span.wpcf7-form-control-wrap.Subject.flat { width: 290px !important; }
+    .nameinput, .emailinput, #wpcf7-f156-p143-o1\20 formwrap > form > p > span.wpcf7-form-control-wrap.Message > textarea { width: 225px !important; }
+  .btn { width: 110px; }
 }

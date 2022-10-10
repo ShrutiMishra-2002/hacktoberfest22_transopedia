@@ -46,7 +46,7 @@
 .nav-list li a:hover{
     color: rgb(20, 231, 126);
     border-color:  rgb(29, 59, 143);
-    /* background-color: rgb(219, 189, 189); */
+    background-color: rgb(219, 189, 189);
 
 }
 .nav-list li::after{
@@ -74,8 +74,8 @@ padding: 0 23px;
     border-radius: 8px;
 }
 .background{
-    /* background: rgba(82, 179, 142, 0.7)  url("photo-1486406146926-c627a92ad1ab.jpeg"); */
-    background-image:linear-gradient(rgba(53, 56, 54, 0.685),rgba(40, 158, 40, 0.623)) ,url("university.jpg");
+     background: rgba(82, 179, 142, 0.7)  url("photo-1486406146926-c627a92ad1ab.jpeg"); 
+     background-image:linear-gradient(rgba(53, 56, 54, 0.685),rgba(40, 158, 40, 0.623)) ,url("university.jpg"); 
     background-size: cover;
     background-blend-mode: darken;
   
@@ -125,7 +125,7 @@ padding: 0 23px;
     font-size: 20px;
     font-family: monospace;
     font-weight: 300;
-    /* color: rgb(46, 154, 216); */
+    color: rgb(46, 154, 216);
 }
 .text-big{
 font-size: 30px;  
