@@ -1028,6 +1028,15 @@ section {
   /* top: 20px; */
 }
 
+.btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  bottom: -7px;
+}
 .pricing .btn-buy {
   background: #1e2053;
   display: inline-block;
