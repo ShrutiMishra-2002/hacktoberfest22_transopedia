@@ -60,6 +60,53 @@ h1, h2, h3, h4, h5, h6 {
   opacity: 1;
 }
 
+
+/*--------------------------------------------------------------
+# Social media icons
+--------------------------------------------------------------*/
+.stickyicon-list {
+  position: fixed;
+  top: 300px;
+  transform: translateY(-50%);
+}
+
+.stickyicon-list a {
+  display: block;
+  text-align: center;
+  padding: 18px;
+  transition: all 0.5s ease;
+  color: white;
+  font-size: 20px;
+}
+
+/* Hover affect on sticky social media icons */
+ .stickyicon-list a:hover {
+  color: #000;
+  width: 50px;
+} 
+
+/* Now we have to design each icon of social media */
+.facebook {
+  background: #3b5998;
+  color: white;
+  position: relative;
+}
+
+.twitter {
+  color: white;
+  background: #00acee;
+  position: relative;
+  top: 20px;
+}
+
+.instagram {
+  background: #e1306c;
+  position: relative;
+  top: 40px;
+  color: white;
+}
+
+
 /*--------------------------------------------------------------
 # Preloader
 --------------------------------------------------------------*/
